@@ -19,7 +19,7 @@ function getNumber() {
   const numberInput = parseInt(input.value);
   if (numberInput === number) {
     clue.innerHTML = "Has ganado campeona!!!";
-  } else if (numberInput < 1 || numberInput > 100) {
+  } else if (isNaN(numberInput) || numberInput < 1 || numberInput > 100) {
     clue.innerHTML = "El número debe estar entre 1 y 100";
   } else if (numberInput > number) {
     clue.innerHTML = "Demasiado alto";
