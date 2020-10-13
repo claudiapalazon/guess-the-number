@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Adalab Web Starter Kit</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
   <body class="body">
-    <h1>Adivina el número</h1>
-    <form action="">
-      <label for="number" name="number">Introduce aquí tu número:</label>
-      <input
-        type="text"
-        for="number"
-        name="number"
-        for="number"
-        class="js-input"
-      />
-      <input type="button" value="Prueba" class="js-btn" />
-    </form>
-    <section>
-      <p>
-        Pista: <span class="js-clue">Escribe el número y dale a Prueba</span>
-      </p>
-      <p>Número de intentos: <span class="js-try">0</span></p>
+    <section class="main">
+      <h1 class="main__h1">Adivina el número</h1>
+      <form action="" class="main__form">
+        <label for="number" name="number" class="main__form--label"
+          >Introduce aquí tu número:</label
+        >
+        <input
+          type="text"
+          for="number"
+          name="number"
+          for="number"
+          class="main__form--input js-input"
+        />
+        <input type="button" value="Prueba" class="main__form--button js-btn" />
+      </form>
+      <section class="main__text--clue">
+        <p class="main__text">
+          Pista:
+          <span class="span js-clue">Escribe el número y dale a Prueba</span>
+        </p>
+        <p class="main__text--try">
+          Número de intentos: <span class="span js-try">0</span>
+        </p>
+      </section>
     </section>
     <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
