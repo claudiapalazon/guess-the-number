@@ -11,22 +11,30 @@ function getRandomNumber(max) {
 const number = getRandomNumber(100);
 console.log(`Mi número aleatorio es ${number}`);
 
-let tryNumber = 0;
-
-function getNumber() {
-  tryNumber += 1;
-  tryInput.innerHTML = tryNumber;
+function trackEl(string) {
+  clue.innerHTML = string;
+}
+function feedbackLogic() {
   const numberInput = parseInt(input.value);
   if (numberInput === number) {
-    clue.innerHTML = "Has ganado campeona!!!";
+    trackEl("Has ganado campeona!!!");
   } else if (isNaN(numberInput) || numberInput < 1 || numberInput > 100) {
-    clue.innerHTML = "El número debe estar entre 1 y 100";
+    trackEl("El número debe estar entre 1 y 100");
   } else if (numberInput > number) {
-    clue.innerHTML = "Demasiado alto";
+    trackEl("Demasiado alto");
   } else if (numberInput < number) {
-    clue.innerHTML = "Demasiado bajo";
+    trackEl("Demasiado bajo");
   }
   console.log(`Contenido del input: ${numberInput}`);
+}
+let tryNumber = 0;
+function counterLogic() {
+  tryNumber += 1;
+  tryInput.innerHTML = tryNumber;
+}
+function getNumber() {
+  feedbackLogic();
+  counterLogic();
 }
 
 button.addEventListener("click", getNumber);
